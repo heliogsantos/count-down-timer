@@ -35,7 +35,6 @@ body {
 
 .box {
     padding: 30px 35px;
-    border-radius: 10px;
     color: #ffffff;
 }
 
@@ -49,4 +48,20 @@ body {
     font-size: 40px;
     text-align: center;
     display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .box {
+        padding: 0px 10px;
+        color: #ffffff;
+    }
+
+    .box p {
+        font-weight: 900;
+        font-size: 60px;
+    }
+
+    .box span {
+        font-size: 30px;
+    }
 }
