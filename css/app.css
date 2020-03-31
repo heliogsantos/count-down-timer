@@ -19,7 +19,7 @@ body {
     align-items: center;
 }
 
-.wraper-panel {
+.wraper-count-down-timer {
     width: 70%;
     height: 200px;
     display: flex;
@@ -27,7 +27,7 @@ body {
     align-items: center;
 }
 
-.wraper-panel .content {
+.wraper-count-down-timer .content {
     display: flex;
     width: 400px;
     justify-content: space-around;

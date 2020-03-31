@@ -27,11 +27,11 @@ const newCount = new Panel(initHour, initMinut, initSecond);
 
 renderCounter(hours, minuts, seconds, newCount);
 
-const second = () => {
+const controllerCount = () => {
     seconds.textContent--; 
     setTimeout(() => {
         if(limit) {
-            second(seconds);
+            controllerCount(seconds);
         }
         if(seconds.textContent === '0') {
            seconds.textContent = initSecond;
@@ -50,7 +50,7 @@ const second = () => {
     }, 1000);
 }
 
-second();   
+controllerCount();   
 
 
 
