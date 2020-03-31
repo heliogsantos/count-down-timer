@@ -18,10 +18,10 @@ const renderCounter = (hour, minut, second, { hours, minuts, seconds } = obj) =>
     second.textContent = seconds;
 }
 
-const initSecond = 60;
-const initMinut = 60;
-const initHour = 24;
-let limit = 24;
+const initSecond = 5;
+const initMinut = 2;
+const initHour = 2;
+let limit = 2;
 
 const newCount = new Panel(initHour, initMinut, initSecond);
 
@@ -31,8 +31,9 @@ const controllerCount = () => {
     seconds.textContent--; 
     setTimeout(() => {
         if(limit) {
-            controllerCount(seconds);
+            controllerCount();
         }
+
         if(seconds.textContent === '0') {
            seconds.textContent = initSecond;
            minuts.textContent--;
@@ -40,13 +41,14 @@ const controllerCount = () => {
         if(minuts.textContent === '0') {
             minuts.textContent = initMinut;
             hours.textContent--;
-            limit--
+            limit--;
         }
         if(hours.textContent === '0') {
             seconds.textContent = 0;
             minuts.textContent = 0;
             hours.textContent = 0;
         }
+        
     }, 1000);
 }
 
